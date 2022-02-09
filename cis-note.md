@@ -17,7 +17,7 @@ kubectl apply -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cafe/cis-crd-s
 Following the guide:
 ```
 kubectl create secret generic bigip-login -n kube-system --from-literal=username=admin --from-literal=password=admin
-kubectl create -f k8s-bigip-ctlr/blob/main/user_guides/externaldns-nginx/cis/cis-deployment/bigip-ctlr-clusterrole.yaml
+kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cis-deployment/bigip-ctlr-clusterrole.yaml
 ```
 
 Updated the `k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cis-deployment/f5-bigip-ctlr-deployment.yaml` to reflect the real condition in the lab.
