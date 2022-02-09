@@ -50,6 +50,15 @@ HC Outgoing Broadcast Packets                   0
 root@(bigip1)(cfg-sync Standalone)(Active)(/Common)(tmos)#
 ```
 
+For the above architecture, CIS will connect from `192.168.30.61` to BIG-IP management interface `192.168.10.62`. A management route in BIG-IP must be added so BIG-IP management plane knows where to return the traffic:
+```
+tmsh create sys management-route cluster1 network 192.168.30.61/32 gateway 192.168.10.253
+```
+
+Saved the BIG-IP config:
+```
+tmsh save sys config
+```
 
 ## Kubernetes Installation
 Next step is to install Kubernetes 1.19.x with Flannel. I choose 1.19.6 at this point in time. I refer to the procedure in [https://kubernetes.io/docs/setup/production-environment/container-runtimes/](https://kubernetes.io/docs/setup/production-environment/container-runtimes/).
