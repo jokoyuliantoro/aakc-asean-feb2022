@@ -55,6 +55,22 @@ kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cis-deploymen
 
 Ensure that the CIS is working fine. Monitoring its log via k9s shows below:
 
-== insert picture ==
+![CIS in Running State](cis-running.png)
+
+![CIS Running Log](cis-running-log.png)
+
+You can check in BIG-IP that CIS created an entry in FDB:
+
+```
+root@(bigip1)(cfg-sync Standalone)(Active)(/Common)(tmos)# list net fdb tunnel fl-vxlan
+net fdb tunnel fl-vxlan {
+    records {
+        72:c1:e4:29:1c:f0 {
+            endpoint 192.168.30.61%0
+        }
+    }
+}
+root@(bigip1)(cfg-sync Standalone)(Active)(/Common)(tmos)#
+```
 
 If all is fine then next is IPAM installation in [here](ipam-note.md).
