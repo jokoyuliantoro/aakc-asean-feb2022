@@ -23,6 +23,34 @@ tmsh create net tunnels tunnel fl-vxlan key 1 profile fl-vxlan local-address 192
 tmsh create net self fl-vxlan address 10.244.254.254/16 vlan fl-vxlan
 ```
 
+Take note the MAC address of the fl-vlan tunnel:
+```
+root@(bigip1)(cfg-sync Standalone)(Active)(/Common)(tmos)# show net tunnels tunnel fl-vxlan all-properties
+
+-------------------------------------------------
+Net::Tunnel: fl-vxlan
+-------------------------------------------------
+MAC Address                     00:0c:29:23:69:cf
+Interface Name                           fl-vxlan
+
+Incoming Discard Packets                        0
+Incoming Error Packets                          0
+Incoming Unknown Proto Packets                  0
+Outgoing Discard Packets                        0
+Outgoing Error Packets                         30
+HC Incoming Octets                              0
+HC Incoming Unicast Packets                     0
+HC Incoming Multicast Packets                   0
+HC Incoming Broadcast Packets                   0
+HC Outgoing Octets                              0
+HC Outgoing Unicast Packets                     0
+HC Outgoing Multicast Packets                   0
+HC Outgoing Broadcast Packets                   0
+
+root@(bigip1)(cfg-sync Standalone)(Active)(/Common)(tmos)#
+```
+
+
 ## Kubernetes Installation
 Next step is to install Kubernetes 1.19.x with Flannel. I choose 1.19.6 at this point in time. I refer to the procedure in [https://kubernetes.io/docs/setup/production-environment/container-runtimes/](https://kubernetes.io/docs/setup/production-environment/container-runtimes/).
 
