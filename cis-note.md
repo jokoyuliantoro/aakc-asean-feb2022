@@ -44,8 +44,8 @@ kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cis-deploymen
 Last in CIS is to create the logical representation of the BIG-IP in k8s cluster since we are using ClusterIP and Flannel. Update `k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cis-deployment/f5-bigip-node.yaml` as follow:
 
 1. Change the `VtepMAC` value to the MAC Address of the `fl-vxlan` tunnel in BIG-IP.
-2. Change the `public-ip` value to the internal self-IP address of BIG-IP.
-3. Change the `podCIDR` value to `10.244.254.0/24` following the smaller subnet of the self-IP address of the VXLAN of BIG-IP.
+2. Change the `public-ip` value to the internal self-IP address of BIG-IP. In my case, it is `192.168.30.62`.
+3. Change the `podCIDR` value to the smaller subnet of the self-IP address of the VXLAN of BIG-IP. In my case, it is `10.244.254.0/24`.
 
 Then apply it:
 
