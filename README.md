@@ -98,7 +98,7 @@ Next is installing `flannel` based on this [guide](https://github.com/flannel-io
 kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
 ```
 
-I am super lazy person so I install [k9s](https://k9scli.io/):
+I installed [k9s](https://k9scli.io/) for easier k8s operation:
 ```
 wget -O - https://github.com/derailed/k9s/releases/download/v0.25.18/k9s_Linux_x86_64.tar.gz | tar xvfz - k9s && sudo install k9s /usr/local/bin && rm k9s
 ```
