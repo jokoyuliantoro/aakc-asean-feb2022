@@ -106,4 +106,6 @@ wget -O - https://github.com/derailed/k9s/releases/download/v0.25.18/k9s_Linux_x
 Once done, I ran `k9s` and I saw this:
 ![k9s base](k9s-base-snapshot.png)
 
+The cluster looks good.
+
 Next, I set up the CIS part. The note is [here](cis-note.md).
