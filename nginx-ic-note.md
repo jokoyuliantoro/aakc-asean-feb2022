@@ -29,6 +29,6 @@ kubectl apply -f k8s-bigip-ctlr/user_guides/externaldns-nginx/nginx-config/nginx
 
 Ensure it is running without error message:
 
-=== insert picture ===
+![NGINX-IC Running](nginx-ic-running.png)
 
 Next is installing Cafe in [here](cafe-note.md).
