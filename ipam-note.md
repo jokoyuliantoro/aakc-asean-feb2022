@@ -42,6 +42,6 @@ kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/ipam-deployment/f
 
 Ensure the IPAM is running with k9s:
 
-== insert picture ==
+![IPAM Running State](ipam-running.png)
 
 If all is fine then next is NGINX IC installation [here](nginx-ic-note.md).
