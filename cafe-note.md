@@ -24,6 +24,8 @@ kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cafe/vs-coffe
 
 At this point, CIS should trigger new VS configuration for LTM. Have a look into the right BIG-IP partition which is `k8s` in my case. If you familiarised with the CIS deployment parameters then you know where the partition name is defined.
 
+Before creating the ExternalDNS kind, update the `dataServerName` in the `edns-*.yaml` to point to data center in GSLB. My case is `/Common/DataCenter1`. Then create the ExternalDNS:
+
 ```
 kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cafe/edns-tea.yaml
 kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cafe/edns-coffee.yaml
