@@ -24,10 +24,10 @@ Updated the `k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cis-deployment/f5-
 
 1. Change `--bigip-username` to `admin`.
 2. Change `--bigip-password` to `admin`.
-3. Change `--bigip-url` to `192.168.10.62` (the management IP of BIG-IP in this lab).
+3. Change `--bigip-url` to the management IP of BIG-IP. My case is `192.168.10.62`.
 4. Change `--gtm-bigip-username` to `admin`.
 5. Change `--gtm-bigip-password` to `admin`.
-6. Change `--gtm-bigip-url` to `admin`.
+6. Change `--gtm-bigip-url` to the management IP of BIG-IP. My case is `192.168.10.62`..
 7. Confirm the VXLAN name in `--flannel-name` if it was changed in BIG-IP.
 
 Have a look on other parameters to get them familiarised.
