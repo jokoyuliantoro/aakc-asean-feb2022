@@ -22,10 +22,14 @@ kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cafe/vs-tea.y
 kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cafe/vs-coffee.yaml
 ```
 
-At this point, CIS should trigger new VS configuration for LTM.
+At this point, CIS should trigger new VS configuration for LTM. Have a look into the right BIG-IP partition which is `k8s` in my case. If you familiarised with the CIS deployment parameters then you know where the partition name is defined.
 
 ```
 kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cafe/edns-tea.yaml
 kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cafe/edns-coffee.yaml
 ```
+At this point, CIS should trigger WideIP configuration for GTM.
 
+That's all. Do let me know on any input/correction/suggestion.
+
+Good luck! 
