@@ -22,13 +22,9 @@ kubectl create -f k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cis-deploymen
 
 Updated the `k8s-bigip-ctlr/user_guides/externaldns-nginx/cis/cis-deployment/f5-bigip-ctlr-deployment.yaml` to reflect the real condition in the lab.
 
-1. Change `--bigip-username` to `admin`.
-2. Change `--bigip-password` to `admin`.
-3. Change `--bigip-url` to the management IP of BIG-IP. My case is `192.168.10.62`.
-4. Change `--gtm-bigip-username` to `admin`.
-5. Change `--gtm-bigip-password` to `admin`.
-6. Change `--gtm-bigip-url` to the management IP of BIG-IP. My case is `192.168.10.62`..
-7. Confirm the VXLAN name in `--flannel-name` if it was changed in BIG-IP.
+1. Change `--bigip-url` to the management IP of BIG-IP. My case is `192.168.10.62`.
+2. Change `--gtm-bigip-url` to the management IP of BIG-IP. My case is `192.168.10.62`..
+3. Confirm the VXLAN name in `--flannel-name` if it was changed in BIG-IP.
 
 Have a look on other parameters to get them familiarised.
 
