@@ -1,4 +1,6 @@
 # My Notes on Setting Up AAKC Lab
+AAKC stands for Active-Active Kubernetes Cluster. This is an extension from the previous concept: Active-Active Data Center.
+
 This note is based on the guide from [Mark Dittmer's guide](https://github.com/mdditt2000/k8s-bigip-ctlr/tree/main/user_guides/externaldns-nginx). If you want exactly same setup then you can follow this note. Otherwise, this might serve as high level guidance to build your own AAKC lab.
 
 Starting point for this note is an Ubuntu 20.04 and a BIG-IP VE with LTM+DNS provisioned. Below is the architecture of my test:
